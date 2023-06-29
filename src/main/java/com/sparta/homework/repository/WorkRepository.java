@@ -48,7 +48,10 @@ public class WorkRepository {
         }
 
     }
-
+    public Work find(Long id) {
+        Work work = workList.get(id);
+        return work;
+    }
     public String delete(Long id,String pw) {
         if(workList.containsKey(id)) {
             // 해당 메모 삭제하기
@@ -69,8 +72,5 @@ public class WorkRepository {
 
     }
 
-    public Work find(Long id) {
-        Work work = workList.get(id);
-        return work;
-    }
+
 }
